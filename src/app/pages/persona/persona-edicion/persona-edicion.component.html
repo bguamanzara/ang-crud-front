@@ -1,0 +1,37 @@
+<form class="container" [formGroup]="form" (ngSubmit)="operar()" #personaForm="ngForm">
+
+  <div [hidden]="true">
+    <mat-form-field class="full-width">
+      <input matInput placeholder="ID" required formControlName="idCurso">
+    </mat-form-field>
+  </div>
+
+  <mat-form-field class="full-width">
+    <input matInput placeholder="Nombre" required formControlName="nombre">
+  </mat-form-field>
+
+  <mat-form-field class="full-width">
+    <input matInput placeholder="Descripcion" required formControlName="descripcion">
+  </mat-form-field>
+
+  <mat-form-field class="full-width">
+    <input matInput placeholder="Cantidad Horas" required formControlName="cantHoras">
+  </mat-form-field>
+
+  <mat-form-field class="full-width">
+    <input matInput placeholder="Docente" required formControlName="docente">
+  </mat-form-field>
+
+
+  <button mat-raised-button color="primary" type="submit" [disabled]="personaForm.invalid">
+    <mat-icon>done</mat-icon>
+    <span>Aceptar</span>
+  </button>
+
+  <button mat-raised-button color="accent" routerLink='/persona' type="button">
+    <mat-icon>close</mat-icon>
+    <span>Cancelar</span>
+  </button>
+</form>
+
+<br/>
